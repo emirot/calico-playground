@@ -1,0 +1,16 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-nginx
+  namespace: default
+spec:
+  order: 1000
+  selector: app == 'nginx-2'
+  ingress:
+  - action: Allow
+    protocol: TCP
+    source:
+      selector: app == 'nginx-1'
+    destination:
+      ports:
+        - 80
