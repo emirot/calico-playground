@@ -18,6 +18,10 @@ Cluster Type:      k8s,kdd,bgp
 
 ### Playground
 
+3 appps:
+
+nginx1, nginx2, 
+
 #### No Rule applied
 - No rule applied, everything can talk to each other
 
@@ -32,5 +36,12 @@ Only pod 1 can talk to my-service-2, busybox can not.
 kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
 ```
 
+Busybox can talk to ` wget my-service-1.default.svc.cluster.local`
+
+
 #### nginx + global rule 
+
+
+Only pod 1 can talk to my-service-2, busybox can not.
+Other communication timeouts.
 
