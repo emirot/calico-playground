@@ -20,7 +20,7 @@ Cluster Type:      k8s,kdd,bgp
 
 3 apps:
 
-nginx1, nginx2, 
+nginx1, nginx2, busybox
 
 #### No Rule applied
 - No rule applied, everything can talk to each other
