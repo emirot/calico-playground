@@ -18,7 +18,7 @@ Cluster Type:      k8s,kdd,bgp
 
 ### Playground
 
-3 appps:
+3 apps:
 
 nginx1, nginx2, 
 
