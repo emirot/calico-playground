@@ -8,6 +8,29 @@ Playing with Calico
 `export CALICO_DATASTORE_TYPE=kubernetes`
 `export KUBECONFIG=~/.kube/config`
 
+Calicoctl version
+```
+Client Version:    v3.12.0
+Git commit:        84a21b3b
+Cluster Version:   v3.12.0
+Cluster Type:      k8s,kdd,bgp
+```
 
 ### Playground
+
+#### No Rule applied
+- No rule applied, everything can talk to each other
+
+#### Only nginx rule applied
+
+```
+root@nginx-deployment-1-b676f78df-66jqt:/# curl my-service-2.default.svc.cluster.local
+```
+Only pod 1 can talk to my-service-2, busybox can not.
+
+```
+kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
+```
+
+#### nginx + global rule 
 
