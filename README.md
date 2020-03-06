@@ -45,3 +45,6 @@ Busybox can talk to ` wget my-service-1.default.svc.cluster.local`
 Only pod 1 can talk to my-service-2, busybox can not.
 Other communication timeouts.
 
+#### Application layer policy 
+-  https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/app-layer-policy
+
