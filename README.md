@@ -23,6 +23,12 @@ Cluster Type:      k8s,kdd,bgp
 - nginx2 
 - busybox
 
+Deploy nginx 1,2 + busybox:
+```
+kubeclt apply -f resources/
+```
+
+
 #### No Rule applied
 
 - No rule applied, everything can talk to each other.
