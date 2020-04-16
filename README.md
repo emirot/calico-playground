@@ -26,6 +26,7 @@ Cluster Type:      k8s,kdd,bgp
 #### No Rule applied
 
 - No rule applied, everything can talk to each other.
+- https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/03-deny-all-non-whitelisted-traffic-in-the-namespace.md
 
 **_Examples_**:
 
