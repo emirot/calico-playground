@@ -68,3 +68,6 @@ Other communication timeouts.
 
 -  https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/app-layer-policy
 
+#### References
+
+- https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/
