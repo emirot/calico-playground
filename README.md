@@ -26,7 +26,6 @@ Cluster Type:      k8s,kdd,bgp
 #### No Rule applied
 
 - No rule applied, everything can talk to each other.
-- https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/03-deny-all-non-whitelisted-traffic-in-the-namespace.md
 
 **_Examples_**:
 
@@ -74,3 +73,4 @@ Other communication timeouts.
 #### References
 
 - https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/
+- https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/03-deny-all-non-whitelisted-traffic-in-the-namespace.md
