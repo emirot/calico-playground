@@ -27,6 +27,16 @@ Cluster Type:      k8s,kdd,bgp
 
 - No rule applied, everything can talk to each other.
 
+**_Examples_**:
+
+Nginx1 to Nginx2:
+
+```
+kubectl ...
+```
+
+
+
 #### Only nginx rule applied
 
 ```
@@ -41,12 +51,20 @@ kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
 Busybox can talk to ` wget my-service-1.default.svc.cluster.local`
 
 
+#### Global network rule only
+
+##### Pods in default namespace
+
+##### Pods in kube namespace
+
+
 #### nginx + global rule 
 
 
 Only pod 1 can talk to my-service-2, busybox can not.
 Other communication timeouts.
 
-#### Application layer policy 
+#### Application layer policy
+
 -  https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/app-layer-policy
 
