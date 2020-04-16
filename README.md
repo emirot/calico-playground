@@ -17,12 +17,15 @@ Cluster Type:      k8s,kdd,bgp
 
 ### Playground
 
-3 apps:
+#### 3 apps:
 
-nginx1, nginx2, busybox
+- nginx1 
+- nginx2 
+- busybox
 
 #### No Rule applied
-- No rule applied, everything can talk to each other
+
+- No rule applied, everything can talk to each other.
 
 #### Only nginx rule applied
 
