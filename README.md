@@ -33,9 +33,11 @@ Cluster Type:      k8s,kdd,bgp
 Nginx1 to Nginx2:
 
 ```
-kubectl ...
+kubectl exec -it $(kubectl get pod -o name  | grep nginx-deployment-1) bash
+$apt-get update && apt-get install -y curl
+$curl my-service-2.default.svc.cluster.local
+# Get html response form nginx
 ```
-
 
 
 #### Only nginx rule applied
