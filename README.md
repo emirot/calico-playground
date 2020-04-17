@@ -38,7 +38,7 @@ Then before applying calico rules, check if network policies are working: https:
 - nginx2 
 - debian1
 
-Deploy nginx 1,2 + busybox:
+Deploy nginx 1,2 + debian1:
 ```
 kubeclt apply -f resources/
 ```
