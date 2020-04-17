@@ -11,13 +11,24 @@ I decided to use GKE, version 1.16.8-gke.8 because I can get a kubernete cluster
 - `export CALICO_DATASTORE_TYPE=kubernetes`
 - `export KUBECONFIG=~/.kube/config`
 
-Calicoctl version
+**Check install**
+`calicoctl version`
+
 ```
 Client Version:    v3.12.0
 Git commit:        84a21b3b
 Cluster Version:   v3.12.0
 Cluster Type:      k8s,kdd,bgp
 ```
+
+```
+calicoctl get node -o wide
+$ gke-cluster-1-default-pool-6ca3b7a6-nthv
+$ ...
+```
+
+Then before applying calico rules, check if network policies are working: https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/01-deny-all-traffic-to-an-application.md
+
 
 ### Playground
 
