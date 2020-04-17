@@ -21,7 +21,7 @@ Cluster Type:      k8s,kdd,bgp
 
 - nginx1 
 - nginx2 
-- busybox
+- debian1
 
 Deploy nginx 1,2 + busybox:
 ```
@@ -50,13 +50,13 @@ $curl my-service-2.default.svc.cluster.local
 ```
 root@nginx-deployment-1-b676f78df-66jqt:/# curl my-service-2.default.svc.cluster.local
 ```
-Only pod 1 can talk to my-service-2, busybox can not.
+Only pod 1 can talk to my-service-2, debiann1 can not.
 
 ```
-kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
+curl my-service-2.default.svc.cluster.local -> timeout
 ```
 
-Busybox can talk to ` wget my-service-1.default.svc.cluster.local`
+Debian1 can talk to ` wget my-service-1.default.svc.cluster.local`
 
 
 #### Global network rule only
