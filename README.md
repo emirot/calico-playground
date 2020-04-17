@@ -1,6 +1,10 @@
 # calico-playground
 Playing with Calico
 
+### Environment
+
+I decided to use GKE, version 1.16.8-gke.8 because I can get a kubernete cluster after one click.
+
 ### Install
 
 - https://docs.projectcalico.org/maintenance/kubernetes-upgrade#upgrading-if-you-have-application-layer-policy-enabled
@@ -50,7 +54,7 @@ $curl my-service-2.default.svc.cluster.local
 ```
 root@nginx-deployment-1-b676f78df-66jqt:/# curl my-service-2.default.svc.cluster.local
 ```
-Only pod 1 can talk to my-service-2, debiann1 can not.
+Only pod 1 can talk to my-service-2, debian1 can not.
 
 ```
 curl my-service-2.default.svc.cluster.local -> timeout
@@ -61,7 +65,17 @@ Debian1 can talk to ` wget my-service-1.default.svc.cluster.local`
 
 #### Global network rule only
 
+Let's apply: deny-all-global-network-policy.yaml
+
+```
+calicoctl apply -f deny-all-global-network-policy.yaml
+```
+
+
+
 ##### Pods in default namespace
+
+
 
 ##### Pods in kube namespace
 
