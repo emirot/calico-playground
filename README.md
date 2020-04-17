@@ -63,6 +63,10 @@ $curl my-service-2.default.svc.cluster.local
 #### Only nginx rule applied
 
 ```
+calicoctl apply -f calico-playground/network_policies/nginx-2-allow-ingress.yaml
+```
+
+```
 root@nginx-deployment-1-b676f78df-66jqt:/# curl my-service-2.default.svc.cluster.local
 ```
 Only pod 1 can talk to my-service-2, debian1 can not.
@@ -81,8 +85,6 @@ Let's apply: deny-all-global-network-policy.yaml
 ```
 calicoctl apply -f deny-all-global-network-policy.yaml
 ```
-
-
 
 ##### Pods in default namespace
 
