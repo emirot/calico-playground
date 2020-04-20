@@ -88,16 +88,13 @@ calicoctl apply -f deny-all-global-network-policy.yaml
 
 ##### Pods in default namespace
 
-
+No ingress traffic, egress traffic is impacted because I can't access kube-dns to resolve dns.
 
 ##### Pods in kube namespace
 
+No ingress traffic, egress traffic is impacted because I can't access kube-dns to resolve dns.
 
-#### nginx + global rule 
 
-
-Only pod 1 can talk to my-service-2, busybox can not.
-Other communication timeouts.
 
 #### Application layer policy
 
