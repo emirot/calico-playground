@@ -1,11 +1,11 @@
 # calico-playground
 Playing with Calico
 
-### Environment
+## Environment
 
 I decided to use GKE, version 1.16.8-gke.8 because I can get a kubernete cluster after one click.
 
-### Install
+## Install
 
 - https://docs.projectcalico.org/maintenance/kubernetes-upgrade#upgrading-if-you-have-application-layer-policy-enabled
 - `export CALICO_DATASTORE_TYPE=kubernetes`
@@ -30,9 +30,9 @@ $ ...
 Then before applying calico rules, check if network policies are working: https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/01-deny-all-traffic-to-an-application.md
 
 
-### Playground
+## Playground
 
-#### 3 apps:
+### 3 apps:
 
 - nginx1 
 - nginx2 
@@ -44,7 +44,7 @@ kubeclt apply -f resources/
 ```
 
 
-#### No Rule applied
+### No Rule applied
 
 - No rule applied, everything can talk to each other.
 
@@ -60,7 +60,7 @@ $curl my-service-2.default.svc.cluster.local
 ```
 
 
-#### Only nginx rule applied
+### Only nginx rule applied
 
 ```
 calicoctl apply -f calico-playground/network_policies/nginx-2-allow-ingress.yaml
@@ -96,11 +96,11 @@ No ingress traffic, egress traffic is impacted because I can't access kube-dns t
 
 
 
-#### Application layer policy
+### Application layer policy
 
 -  https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/app-layer-policy
 
-#### References
+### References
 
 - https://cloudblogs.microsoft.com/opensource/2019/10/17/tutorial-calico-network-policies-with-azure-kubernetes-service/
 - https://github.com/ahmetb/kubernetes-network-policy-recipes/blob/master/03-deny-all-non-whitelisted-traffic-in-the-namespace.md
